@@ -40,8 +40,11 @@ class Stack{
 				return -1;
 			else {
 				int tmpData=start->number;
-				start=start->next;
+				Node* tmp;
+				tmp=start;
+				start=tmp->next;
 				size--;
+				delete tmp;
 				return tmpData;
 			}
 		}
